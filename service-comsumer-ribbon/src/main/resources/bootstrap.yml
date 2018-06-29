@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: service-consumer-ribbon
+server:
+  port: 9002
