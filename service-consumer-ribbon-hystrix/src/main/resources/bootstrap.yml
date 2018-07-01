@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: service-consumer-ribbon-hystrix
+server:
+  port: 9100

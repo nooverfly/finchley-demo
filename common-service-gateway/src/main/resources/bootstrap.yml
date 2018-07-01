@@ -1,0 +1,21 @@
+server:
+  port: 9300
+spring:
+  application:
+    name: common-service-gateway
+  cloud:
+    gateway:
+      routes:
+      - id: service-session-redis
+        uri: lb://service-session-redis
+        predicates:
+        - Path=/user-session/**
+        filters:
+        - StripPrefix=1
+      discovery:
+        locator:
+          enabled: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

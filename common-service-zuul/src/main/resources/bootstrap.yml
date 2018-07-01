@@ -1,15 +1,14 @@
 spring:
   application:
-    name: service-eureka-client
+    name: common-service-zuul
   cloud:
     config:
       discovery:
         enabled: true
         service-id: config-center
-      profile: dev
       label: master
+      profile: dev
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
-
